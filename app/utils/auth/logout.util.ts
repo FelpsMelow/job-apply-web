@@ -1,18 +1,9 @@
 export function clearSessionAndRedirect(path: string = "/login") {
-    const keysToRemove = [
-        "token",
-        "user",
-        "sideBarOptions",
-        "sideBarSelectedOptions",
-        "sideBarIsCollapsed",
-        "theme",
-    ];
+  localStorage.removeItem("token");
 
-    keysToRemove.forEach((key) => localStorage.removeItem(key));
+  const currentPath = window.location.pathname;
 
-    const currentPath = window.location.pathname;
-
-    if (currentPath !== path) {
-        window.location.href = path;
-    }
+  if (currentPath !== path) {
+    window.location.href = path;
+  }
 }

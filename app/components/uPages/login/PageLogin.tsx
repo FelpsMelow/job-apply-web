@@ -4,24 +4,32 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { userLogin } from "@/app/services/api/user.service";
 import LoginTemplate from "../../templates/login/LoginTemplate";
-import { useUser } from "@/app/contexts/user.context";
 import { useAuth } from "@/app/contexts/authContext";
 import { Alert } from "../../organisms/alerts/Alerts";
 import "./page-login.scss";
 
+interface LoginErrorResponse {
+  response?: {
+    status?: number;
+    data?: {
+      statusCode?: number;
+      message?: string;
+    };
+  };
+}
+
 export default function PageLogin() {
   const [isLoginError, setIsLoginError] = useState(false);
   const router = useRouter();
-  const { setUser } = useUser();
   const { setToken } = useAuth();
 
   const handleLogin = async ({ email, password }: { email: string; password: string }) => {
     try {
       setIsLoginError(false);
 
-      const res = await userLogin({ email, password }); 
+      const res = await userLogin({ email, password });
 
-      if (res.statusCode !== 201 || !res.data?.access_token || !res.data?.user) {
+      if (res.statusCode !== 201 || !res.data?.access_token) {
         setIsLoginError(true);
 
         Alert({
@@ -35,28 +43,16 @@ export default function PageLogin() {
       localStorage.setItem("token", res.data.access_token);
       setToken(res.data.access_token);
 
-      const fullUser = {
-        userId: res.data.user.id,
-        nome: res.data.user.name,
-        email: res.data.user.email,
-        fotoPerfil: res.data.user.profilePhoto,
-        tipoDeAcesso: res.data.user.accessType,
-        obras: res.data.user.projects,
-        status: res.data.user.status,
-        isAuthenticated: true,
-      };
-
-      setUser(fullUser);
-
       Alert({
         type: "success",
         message: "Login realizado com sucesso.",
       });
 
       router.push("/");
-    } catch (error: any) {
-      const statusCode = error?.response?.data?.statusCode ?? error?.response?.status;
-      const message = error?.response?.data?.message;
+    } catch (error: unknown) {
+      const parsedError = error as LoginErrorResponse;
+      const statusCode = parsedError?.response?.data?.statusCode ?? parsedError?.response?.status;
+      const message = parsedError?.response?.data?.message;
 
       if (statusCode === 401) {
         setIsLoginError(true);

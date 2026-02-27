@@ -1,88 +1,23 @@
 export type Theme = "light" | "dark";
 
-export interface ButtonVariant {
-    bg: string;
-    text: string;
-}
-
-export interface ButtonColors {
-    primary: ButtonVariant;
-    secondary: ButtonVariant;
-    danger: ButtonVariant;
-    success: ButtonVariant;
-    link: ButtonVariant;
-}
-
-export interface InputStateColors {
-    bg: string;
-    text: string;
-    border: string;
-    placeholder: string;
-    error: string;
-}
-
-export interface GrayscaleColors {
-    white: string;
-    gray50: string;
-    gray100: string;
-    gray200: string;
-    gray300: string;
-    gray400: string;
-    gray500: string;
-    gray600: string;
-    gray700: string;
-    gray800: string;
-    gray900: string;
-    black: string;
-}
-
-export interface SystemColors {
-    info: string;
-    warning: string;
-    error: string;
-    success: string;
-}
-
-export interface TextColors {
-    primary: string;
-    secondary: string;
-    disabled: string;
-    inverse: string;
-}
-
-export interface BackgroundColors {
-    default: string;
-    muted: string;
-    elevated: string;
-    overlay: string;
-}
-
-export interface BorderColors {
-    default: string;
-    focus: string;
-    error: string;
-}
-
-export interface Shadow {
-    sm: string;
-    md: string;
-    lg: string;
-}
-
-export interface ProgressBarColors {
-    taskFill: string,
-    stepFill: string,
-    track: string
-}
+export type ButtonColors = Record<"primary" | "secondary" | "danger" | "success" | "link", { bg: string; text: string }>;
+export type ProgressBarColors = { taskFill: string; stepFill: string; track: string };
+export type InputStateColors = { bg: string; text: string; border: string; placeholder: string; error: string };
+export type GrayscaleColors = Record<string, string>;
+export type SystemColors = { info: string; warning: string; error: string; success: string };
+export type TextColors = { primary: string; secondary: string; disabled: string; inverse: string };
+export type BackgroundColors = { default: string; muted: string; elevated: string; overlay: string };
+export type BorderColors = { default: string; focus: string; error: string };
+export type Shadow = { sm: string; md: string; lg: string };
 
 export interface Palette {
-    button: ButtonColors;
-    progressBar: ProgressBarColors;
-    input: InputStateColors;
-    grayscale: GrayscaleColors;
-    system: SystemColors;
-    text: TextColors;
-    background: BackgroundColors;
-    border: BorderColors;
-    shadow: Shadow;
+  button: ButtonColors;
+  progressBar: ProgressBarColors;
+  input: InputStateColors;
+  grayscale: GrayscaleColors;
+  system: SystemColors;
+  text: TextColors;
+  background: BackgroundColors;
+  border: BorderColors;
+  shadow: Shadow;
 }

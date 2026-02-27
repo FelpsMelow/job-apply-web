@@ -1,13 +1,14 @@
 "use client";
 
 import PrivateRoute from "./components/organisms/guards/PrivateRoute";
-import HomeTemplate from "./components/templates/home/HomeTemplate";
-import "./home.css";
 
 export default function Home() {
   return (
     <PrivateRoute>
-      <HomeTemplate/>
+      <main style={{ padding: 24 }}>
+        <h1>Home</h1>
+        <p>Usuário autenticado com sucesso.</p>
+      </main>
     </PrivateRoute>
   );
 }
