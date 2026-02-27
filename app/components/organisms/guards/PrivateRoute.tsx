@@ -3,8 +3,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/contexts/authContext";
-import SplashScreen from "../../uPages/splashScreen/SplashScreen";
-import Header from "../../molecules/header/Header";
 
 interface PrivateRouteProps {
   children: React.ReactNode;
@@ -14,20 +12,13 @@ export default function PrivateRoute({ children }: PrivateRouteProps) {
   const { token, isLoading } = useAuth();
   const router = useRouter();
 
-useEffect(() => {
-  if (!isLoading && !token) {
-    router.replace("/login");
-  }
-}, [token, isLoading, router]);
+  useEffect(() => {
+    if (!isLoading && !token) {
+      router.replace("/login");
+    }
+  }, [token, isLoading, router]);
 
-  if (isLoading) return null;
+  if (isLoading || !token) return null;
 
-  if (!token) return <SplashScreen/>;
-
-  return (
-    <>
-      <Header/>
-      {children}
-    </>
-  )
+  return <>{children}</>;
 }
