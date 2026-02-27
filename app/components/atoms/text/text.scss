@@ -1,0 +1,38 @@
+.text {
+    font-family: inherit;
+    transition: color 0.3s ease;
+    min-width: 0;
+    display: inline-block;
+    max-width: 100%;
+
+    &--nowrap {
+        white-space: nowrap;
+    }
+
+    &--truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &--multiline {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        display: block;
+    }
+
+    &--xs { font-size: 0.75rem; }
+    &--sm { font-size: 0.875rem; }
+    &--md { font-size: 1rem; }
+    &--lg { font-size: 1.25rem; }
+    &--xl { font-size: 1.5rem; }
+
+    &--regular { font-weight: 400; }
+    &--medium { font-weight: 500; }
+    &--bold { font-weight: 700; }
+
+    &--left { text-align: left; }
+    &--center { text-align: center; }
+    &--right { text-align: right; }
+}

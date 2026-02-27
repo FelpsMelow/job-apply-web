@@ -1,0 +1,53 @@
+.file-dropzone {
+    width: 100%;
+    height: 350px;
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px dashed #9ca3af; // cinza neutro
+    border-radius: 12px;
+
+    background-color: transparent;
+    color: #6b7280;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: 
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+
+    // Estado: dragging
+    &.dragging {
+        border-color: #2563eb;
+        background-color: #eff6ff;
+        color: #1d4ed8;
+    }
+
+    // Estado: sucesso
+    &.success {
+        border-color: #16a34a;
+        background-color: #ecfdf5;
+        color: #166534;
+    }
+
+    // Estado: erro
+    &.error {
+        border-color: #dc2626;
+        background-color: #fef2f2;
+        color: #991b1b;
+    }
+
+    // Acessibilidade / foco via teclado
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+    }
+}

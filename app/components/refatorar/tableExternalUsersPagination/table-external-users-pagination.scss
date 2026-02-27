@@ -1,0 +1,119 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0 0 12px 12px;
+  background: #f9fafb;
+}
+
+.pagination__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.pagination__text {
+  color: #374151;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.pagination__pageSize {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.pagination__pageSizeLabel {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.pagination__select {
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  font-size: 13px;
+  color: #111827;
+  outline: none;
+
+  &:focus {
+    border-color: rgba(59, 130, 246, 0.7);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  }
+}
+
+.pagination__right {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.pagination__btn,
+.pagination__page {
+  height: 38px;
+  min-width: 44px;
+  padding: 0 12px;
+
+  border: 0;
+  background: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  color: #374151;
+  font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: #f3f4f6;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+.pagination__page {
+  border-left: 1px solid rgba(0, 0, 0, 0.10);
+
+  &.is-active {
+    background: rgba(59, 130, 246, 0.10);
+    color: #1d4ed8;
+    font-weight: 600;
+  }
+}
+
+.pagination__btn + .pagination__page,
+.pagination__page + .pagination__page {
+  border-left: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.pagination__ellipsis {
+  height: 38px;
+  min-width: 44px;
+  padding: 0 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6b7280;
+  border-left: 1px solid rgba(0, 0, 0, 0.10);
+  user-select: none;
+}

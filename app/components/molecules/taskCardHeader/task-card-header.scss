@@ -1,0 +1,12 @@
+.task-card-header{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .task-name {
+        width: calc(100% - 50px);
+    }
+}

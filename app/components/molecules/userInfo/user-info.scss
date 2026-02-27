@@ -1,0 +1,19 @@
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-width: 0; // importante para truncate funcionar
+
+    &__name {
+    flex: 1;
+    min-width: 0;
+    }
+    .avatar {
+        width: 40px;  // ou o tamanho que você usa
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+}

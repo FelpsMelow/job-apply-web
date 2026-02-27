@@ -1,0 +1,77 @@
+.send-progress-card {
+    width: 50%;
+    border-radius: 14px;
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.send-progress-card--sending {
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.send-progress-card-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.send-progress-card-title {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.send-progress-card-status {
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.send-progress-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.send-progress-card-metric {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.send-progress-card-metric-label {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.send-progress-card-metric-value {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.send-progress-card-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.send-progress-card-progress-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+
+    span {
+        opacity: 0.7;
+    }
+}
+
+.send-progress-card-bar {
+    height:20px;
+}

@@ -1,0 +1,136 @@
+.instructions-content-title,
+.instructions-content-section-title,
+.instructions-content-text,
+.instructions-content-card-title,
+.instructions-content-card-text,
+.instructions-content-tip-text {
+    color: #fff;
+}
+
+.instructions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Header */
+.instructions-content-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instructions-content-header-icon {
+    font-size: 24px;
+    opacity: 0.9;
+}
+
+.instructions-content-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* Section */
+.instructions-content-section-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.instructions-content-section-icon {
+    font-size: 16px;
+}
+
+.instructions-content-section-title {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* List */
+.instructions-content-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.instructions-content-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.instructions-content-check {
+    font-size: 15px;
+    background: #fff;
+    color: var(--brand-orange-deep, #c44f1a);
+    border-radius: 999px;
+    padding: 2px;
+    margin-top: 2px;
+}
+
+.instructions-content-text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.45;
+
+    strong {
+        font-weight: 700;
+    }
+}
+
+/* Card */
+.instructions-content-card {
+    background: rgba(246, 106, 30, 0.554);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.instructions-content-card-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 6px 0;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.instructions-content-card-text {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+/* Button */
+.instructions-content-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 12px;
+
+    background: #fff;
+    color: var(--brand-orange-deep, #c44f1a);
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: opacity 0.15s ease, transform 0.15s ease;
+
+    &:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+}

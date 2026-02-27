@@ -1,0 +1,15 @@
+.tr {
+    transition: background 160ms ease;
+}
+
+.tr:hover {
+    background: #fafafb;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+  background: #fff3e8; // leve laranja, igual seu estilo
+}

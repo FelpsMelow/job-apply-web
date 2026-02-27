@@ -1,0 +1,17 @@
+.copy-id-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+
+    &:active {
+        transform: scale(0.92);
+    }
+
+    &:not(:active) {
+        transform: scale(1);
+    }
+}

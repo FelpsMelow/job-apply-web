@@ -1,0 +1,10 @@
+.step-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-item__connector {
+    display: inline-flex;
+    align-items: center;
+}

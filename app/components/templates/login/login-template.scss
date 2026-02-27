@@ -1,0 +1,99 @@
+.login-template {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ===========================
+LEFT SIDE – HERO
+=========================== */
+.login-hero {
+    position: relative;
+    width: 50%;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEX1aX29R_droPQAOMYIrFDMgw2KUmUYTJHxakSCKSL49td5wlJZh3F-RE95yriCSHfBUuQ1oG35_k4GOS-bl0E1YqNdh9EpyXkxHpybPwaDU1J7nURj_J7TBi8V0elNb3Atlu20VFumILey6pfJ-jVV-MbLks6BNBeU8mGXTdK_BgLgCJ6LwQ1P_w5PFSjIGCzAk5IIM_U-NXis1pfupZWSSeXi7nDru1LmVu8ysxrOjfL36psJw0aKqymkL1FtK-PnB8-Kio7cw');
+    background-size: cover;
+    background-position: center;
+    display: none;
+
+    @media (min-width: 1024px) {
+    display: block;
+    }
+}
+
+.login-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(243, 106, 45, 0.35),
+        rgba(49, 108, 237, 0.15)
+    );
+}
+
+.login-hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.login-hero-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.login-hero-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.login-hero-title {
+    font-size: 18px;
+}
+
+.login-hero-text {
+    max-width: 420px;
+    h2 {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    p {
+        margin-top: 16px;
+        font-size: 16px;
+        opacity: 0.85;
+    }
+}
+
+.login-hero-footer {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* ===========================
+RIGHT SIDE – FORM
+=========================== */
+.login-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 32px;
+}

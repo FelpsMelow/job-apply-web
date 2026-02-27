@@ -1,0 +1,111 @@
+{
+    "name": "Checklist App",
+    "short_name": "Checklist",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "description": "App para visualização e acompanhamento de checklists",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/avatar-icon-24x24.svg",
+            "sizes": "24x24",
+            "type": "image/svg"
+        },
+        {
+            "src": "/view-observation-icon-18x18.svg",
+            "sizes": "18x18",
+            "type": "image/svg"
+        },
+        {
+            "src": "/create-observation-icon-18x18.svg",
+            "sizes": "18x18",
+            "type": "image/svg"
+        },
+        {
+            "src": "/arrow-icon-18x18.svg",
+            "sizes": "18x18",
+            "type": "image/svg"
+        },
+        {
+            "src": "/arrow-icon-24x24.svg",
+            "sizes": "18x18",
+            "type": "image/svg"
+        },
+        {
+            "src": "/wifi-icon-18x18.svg",
+            "sizes": "18x18",
+            "type": "image/svg"
+        },
+        {
+            "src": "/wifi-off-icon-18x18.svg",
+            "sizes": "18x18",
+            "type": "image/svg"
+        },
+        {
+            "src": "/menu-collapse-icon-24x24.svg",
+            "sizes": "24x24",
+            "type": "image/svg"
+        },
+        {
+            "src": "/avatar-icon-white-24x24.svg",
+            "sizes": "24x24",
+            "type": "image/svg"
+        },
+        {
+            "src": "/logo-icon-28x28.svg",
+            "sizes": "28x28",
+            "type": "image/svg"
+        },
+        {
+            "src": "/logo-google-icon-23x23.svg",
+            "sizes": "23x23",
+            "type": "image/svg"
+        },
+        {
+            "src": "/logo-apple-icon-20x23.svg",
+            "sizes": "20x23",
+            "type": "image/svg"
+        },
+        {
+            "src": "/logo-leme-icon-176x54.svg",
+            "sizes": "176x54",
+            "type": "image/svg"
+        },
+        {
+            "src": "/clipboard-Icon.svg",
+            "sizes": "18x18",
+            "type": "image/svg"
+        },
+        {
+            "src": "/icon-camera-24x24.svg",
+            "sizes": "24x24",
+            "type": "image/svg"
+        },
+        {
+            "src": "/icon-blue-arrow-24x24.svg",
+            "sizes": "24x24",
+            "type": "image/svg"
+        },
+        {
+            "src": "/xlsx-icon-64x64.svg",
+            "sizes": "64x64",
+            "type": "image/svg"
+        },
+        {
+            "src": "/empty-users-search-1536x1024.png",
+            "sizes": "1536x1024",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+.term-container {
+    max-width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    .term-container-input {
+        border: none;
+    }
+}

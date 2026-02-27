@@ -1,0 +1,27 @@
+.auth-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .auth-header-img {
+        margin-bottom: 16px;
+    }
+
+    .auth-redirect {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 8px;
+        margin-bottom: 14px;
+
+        .auth-redirect-button {
+            text-decoration: underline;
+        }
+    }
+
+}

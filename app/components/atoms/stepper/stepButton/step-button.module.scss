@@ -1,0 +1,42 @@
+.step-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 8px 12px;
+
+    background: #fff;
+    cursor: pointer;
+
+    transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+
+    &:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.step-button--current {
+    border-color: #fdba74;
+
+    &:hover {
+        background: #fff7ed;
+        border-color: #fdba74;
+    }
+}
+
+.step-button--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+    &:hover {
+        background: #fff;
+        border-color: #e5e7eb;
+    }
+}
